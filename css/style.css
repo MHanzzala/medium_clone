@@ -1,0 +1,251 @@
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Basic styles for navigation bar */
+nav {
+  background-color: #ffc017;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top:0;
+  border-bottom: 1px solid black;
+  box-sizing: inherit;
+}
+
+.nav-left img {
+  max-width: 20%;
+  margin-left: 40px;
+  aspect-ratio: 1/1;
+}
+
+.nav-right a {
+  color: #000;
+  font-weight: bold;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .nav-right a:not(:last-child) {
+    display: none;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .nav-toggle span {
+    width: 100%;
+    height: 2px;
+    background-color: #222222;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-toggle.active span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .nav-toggle.active span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-right a {
+    margin: 1rem 0;
+  }
+
+  .nav-right a.btn-get-started {
+    margin-top: 2rem;
+  }
+
+  .nav-right.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.rounded-button {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.container {
+  background-color: #ffc017;
+  border-bottom: 1px solid black;
+  text-align: left;
+  padding: 50px 10px;
+}
+
+.container h1 {
+  font-size: 106px;
+  margin: 0;
+  margin-left: 30px;
+}
+
+.container p {
+  font-size: 24px;
+  margin: 20px 0;
+  margin-left: 30px;
+}
+
+.container button {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 0.75rem 2rem;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 40px;
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .container h1 {
+    font-size: 64px;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+}
+.containertwo {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  color: black;
+  border-bottom: 1px solid black;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.trending-title {
+  flex: 0 0 30%;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 70%;
+  align-items: center;
+}
+
+.post {
+  width: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.post-number {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.writer-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.post-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.post-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.post-time {
+  font-size: 14px;
+  color: gray;
+  margin: 2px 0;
+}
+
+.icon {
+  font-size: 24px;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .trending-title {
+    text-align: center;
+  }
+
+  .post-container {
+    flex-direction: column;
+  }
+
+  .post {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .post-number {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+}

@@ -14,9 +14,10 @@ nav {
   align-items: center;
   padding: 1rem;
   position: sticky;
-  top:0;
+  top: 0;
   border-bottom: 1px solid black;
   box-sizing: inherit;
+  z-index: 1;
 }
 
 .nav-left img {
@@ -248,4 +249,150 @@ nav {
   .icon {
     display: none;
   }
+}
+
+.containerthree {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.article-container {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  vertical-align: middle;
+}
+
+.article-image {
+  flex: 1;
+  margin-left: 0px;
+  margin-right: 100px;
+  width: 200px;
+  aspect-ratio: auto 200 / 134;
+  height: 134px;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.article-content {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.article-name {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+
+.card-container {
+  width: 35%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  
+}
+
+.card-header {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tag-button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.see-more {
+  text-align: left;
+}
+
+.see-more-link {
+  color: green;
+  font-weight: bold;
+}
+
+.mobile-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-footer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card-container {
+    display: none;
+  }
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: white;
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.medium-app {
+  font-size: 0.9rem;
+  font-weight: bold;
 }

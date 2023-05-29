@@ -666,7 +666,7 @@ nav {
   font-size: 18px;
 }
 
-.btn {
+.blackccontainer .btn {
   display: block;
   margin: 20px auto;
   width: 180px;
@@ -682,7 +682,7 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-.btn:hover {
+.blackccontainer .btn:hover {
   background-color: green;
   color: white;
 }
@@ -703,6 +703,67 @@ nav {
   }
 
   .blackccontainer strong {
+    font-size: 4vw;
+  }
+}
+
+
+.greencontainer {
+  background-color: #34a245;
+  color: black;
+  padding: 66px 0px;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.greencontainer strong {
+  font-size: 7.3vw;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.greencontainer .para {
+  font-size: 18px;
+}
+
+.btn {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .greencontainer {
+    padding: 30px 0px;
+  }
+
+  .greencontainer strong {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .greencontainer {
+    padding: 20px 0px;
+  }
+
+  .greencontainer strong {
     font-size: 4vw;
   }
 }
@@ -767,15 +828,21 @@ nav {
   }
 }
 
-.container_t {
+.greencontainer_three {
+  background-color: #34a245;
+  color: black;
+  position: relative;
+  text-align: left;
   display: flex;
   border-bottom: 1px solid black;
 }
-.container_t .vertical {
+
+.greencontainer_three .vertical {
   border-left: 1px solid black;
   margin-right: 10px;
 }
-.left-box {
+
+.left-side {
   flex-grow: 1;
   border-bottom: 1px solid black;
   padding: 10px;
@@ -783,29 +850,39 @@ nav {
   padding-right: 60px;
   padding-left: 60px;
 }
-.right-box {
+.right-side {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
 }
 
-.left-box,
-.right-box {
+.left-side,
+.right-side {
   width: 50%;
 }
 
-@media only screen and (max-width: 600px) {
-  .greencontainer_two {
+@media only screen and (max-width: 768px) {
+  .greencontainer_three {
     flex-direction: column;
   }
-  .left-box,
-  .right-box {
-    border: none;
-    padding: 0;
-    font-size: 16px;
-  }
-  .right-box video {
+
+  .left-side,
+  .right-side {
     width: 100%;
+    border-bottom: none;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .left-side,
+  .right-side {
+    padding: 10px;
+  }
+
+  .greencontainer_three strong {
+    font-size: 4vw;
   }
 }
